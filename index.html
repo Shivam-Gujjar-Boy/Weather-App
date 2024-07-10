@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Wrapper -->
+    <div class="wrapper">
+      <!-- Heading -->
+      <h1>Weather App</h1>
+
+      <!-- Tab Container -->
+      <div class="tab-container">
+        <p class="tab" data-userWeather>Your Weather</p>
+        <p class="tab" data-searchWeather>Search Weather</p>
+      </div>
+
+      <!-- Weather Container -->
+      <div class="weather-container">
+        <!-- Grant location Page -->
+        <div class="grant-location-container">
+          <img
+            src="./images/location-pin-svgrepo-com.svg"
+            width="180"
+            height="180"
+            loading="lazy"
+          />
+          <p id="grant">Grant Location Access</p>
+          <p id="allow">Allow Access to get weather information</p>
+          <button class="btn1" data-grantAccess>Grant Access</button>
+        </div>
+
+        <!-- Search Tab -->
+        <form class="form-container" data-searchForm>
+          <input type="text" placeholder="Search for City" data-searchInput />
+          <button type="submit" class="btn2">
+            <img
+              src="./images/search-svgrepo-com.svg"
+              width="20"
+              height="20"
+              loading="lazy"
+            />
+          </button>
+        </form>
+
+        <!-- Error Page -->
+        <div class="error-page">
+          <img
+            src="./images/error-page-svgrepo-com.svg"
+            width="180"
+            height="180"
+          />
+          <p class="error-text">Not Found</p>
+        </div>
+
+        <!-- Loading Page -->
+        <div class="loading-conatiner">
+          <img src="./images/Spinner-3.gif" width="150" height="150" />
+          <p id="loading">Loading</p>
+        </div>
+
+        <!-- Weather Info Page -->
+        <div class="user-info-container">
+          <!-- City Name -->
+          <div class="name">
+            <p data-cityName></p>
+
+            <!-- Country Flag -->
+            <img data-countryIcon />
+          </div>
+
+          <!-- Description -->
+          <p id="description" data-weatherDesc></p>
+
+          <!-- Weather Icon -->
+          <img id="weather-icon" data-weatherIcon width="80" height="80" />
+
+          <!-- Temperature -->
+          <p id="temp" data-temp></p>
+
+          <!-- Bottom Three Cards -->
+          <div class="parameter-container">
+            <!-- Card1 -->
+            <div class="parameter">
+              <img src="./images/wind-svgrepo-com.svg" width="70" height="70" />
+              <p>Wind Speed</p>
+              <p data-windspeed></p>
+            </div>
+
+            <!-- Card2 -->
+            <div class="parameter">
+              <img
+                src="./images/humidity-svgrepo-com.svg"
+                width="70"
+                height="70"
+              />
+              <p>Humidity</p>
+              <p data-humidity></p>
+            </div>
+
+            <!-- Card3 -->
+            <div class="parameter">
+              <img
+                src="./images/cloudy1-svgrepo-com.svg"
+                width="70"
+                height="70"
+              />
+              <p>Cloudy</p>
+              <p data-cloudiness></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Fill Container</title>
+    <style>
+      #container {
+        width: 500px;
+        height: 50px;
+        background-color: white;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <button onclick="fillContainer()">Fill Container</button>
+
+    <script>
+      function getRandomNumber() {
+        return Math.floor(Math.random() * 11); // Random number between 0 and 10
+      }
+
+      function fillContainer() {
+        let randomNumber = getRandomNumber();
+        let fillPercentage = randomNumber * 10; // Convert to percentage (0% to 100%)
+        document.getElementById(
+          "container"
+        ).style.background = `linear-gradient(to right, blue ${fillPercentage}%, white ${fillPercentage}%)`;
+      }
+    </script>
+  </body>
+</html> -->
